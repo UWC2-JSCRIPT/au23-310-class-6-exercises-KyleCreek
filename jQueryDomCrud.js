@@ -28,5 +28,6 @@ $('p').remove();
 // and replaced with text that says "Added to cart"
 $("#cta").on('click', function(e){
     // Input STuff Here. 
+    $("#cta").text('Added to Cart');
 })
 });
