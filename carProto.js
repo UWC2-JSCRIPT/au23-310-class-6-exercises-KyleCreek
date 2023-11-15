@@ -34,6 +34,7 @@ class ElectricCar extends Car{
         super(model, currentSpeed);
         this.motor = 'electric';
     }
+    // Calls the Accelerate Method from the Inhereted Class Twice. 
     accelerate(){
         super.accelerate();
         super.accelerate();
