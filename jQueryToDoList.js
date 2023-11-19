@@ -1,11 +1,15 @@
 /**
  * Toggles "done" class on <li> element
  */
-
+$('.today-list').on('click', 'li', function(){
+  $(this).closest('li').toggleClass('done');
+});
 /**
  * Delete element when delete link clicked
  */
-
+$('.today-list').on('click', '.delete', function(){
+  $(this).closest('li').remove()
+});
 /**
  * Adds new list item to <ul>
  */
@@ -17,6 +21,7 @@ const addListItem = function(e) {
   // Build Span. 
   const newSpan = $('<span>');
   newSpan.text(text);
+
   
   // Build Delete Buttton
   const newA = $('<a>');
@@ -26,6 +31,10 @@ const addListItem = function(e) {
   // Append the Elements
   newLi.append(newSpan);
   newLi.append(newA);
+
+
+  // Append the list item to the UL
+  $('.today-list').append(newLi);
 
   // rest here...
 };
